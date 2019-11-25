@@ -16,6 +16,7 @@ public class PrimeNo {
         for (int idx = 0; idx < (i1.length() / 2); idx++) {
             // for (int idxx = i1.length() - 1; idxx > (i1.length() / 2); idxx--) {
             // if를 안 쓰셨다는 다른분 아이디어 들었음
+        	//어떤분은 또 for를 안쓰셨다고 함
                 tp = ch[idx];   ch[idx] = ch[lastIdx - idx];    ch[lastIdx - idx] = tp;
             // }
  
