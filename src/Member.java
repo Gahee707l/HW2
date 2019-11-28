@@ -27,6 +27,11 @@ public class Member {//extends Object
 		this.name = name;
 	}
 	
+	//alt shif s s
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + "]";
+	}
 	
 
 }
