@@ -67,13 +67,10 @@ public class MemberManagementDemo {
 	// 5.back
 	public void update() {
 		String id = console("수정할 아이디>");
-		/*if(){
-		int idx = list.indexOf(id);
-		Member m =list.get(idx);}
-		else{
-			
-		}
-		*/
+
+		print();
+		String index = console("번호를 선택하세요>");
+		run(index);
 
 	}
 
@@ -83,6 +80,7 @@ public class MemberManagementDemo {
 	// 4.멤버정보 모두 출력
 	// 5.back
 	public void delete() {
+		String id = console("삭제할 아이디>");
 
 	}
 
@@ -91,7 +89,46 @@ public class MemberManagementDemo {
 	// 3.없다면 "검색된 아이디가 없습니다"라는 메세지 출력
 	// 5.back
 	public void serch() {
+		String id = console("검색할 아이디>");
 
+		Member m;
+
+		HashMap<String, String> map = new HashMap<String, String>();
+		for (int i = 0; i < list.size(); i++) {
+			m = list.get(i);
+			map.put(m.getId(), m.getName());
+		}
+
+		Set<String> set = map.keySet();
+		Iterator<String> ix = set.iterator();
+
+		if (!(id.isEmpty()) && map.get(id) != null) {
+			// while (ix.hasNext()) {
+			// if(map.get(ix).equals(id)){
+			/*for (Member member : list) {
+				member.toString();
+			}*/
+			for(int i=0;i<list.size();i++){
+				list.get(i).toString();
+			}
+		} else {
+			System.out.println("검색한 아이디가 없습니다.");
+		}
+
+		/*
+		 * if (!(id.isEmpty()) || list.contains(id)) {
+		 * 
+		 * } else {
+		 * 
+		 * for (int i = 0; i < list.size(); i++) { m = list.get(i); if
+		 * (id.equals(m.getId())) {
+		 * 
+		 * } } }
+		 */
+
+		print();
+		String index = console("번호를 선택하세요>");
+		run(index);
 	}
 
 	public static void main(String[] args) {
