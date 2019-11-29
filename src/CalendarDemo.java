@@ -18,6 +18,7 @@ public class CalendarDemo {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String ymd = sc.nextLine();
+		sc.close();
 		//year month day
 		
 		Calendar(ymd);
