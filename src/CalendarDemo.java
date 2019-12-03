@@ -22,6 +22,7 @@ public class CalendarDemo {
 		//year month day
 		
 		Calendar(ymd);
+		//프린트 함수 오버 로딩도 하나의 방법.
 	}
 
 }
